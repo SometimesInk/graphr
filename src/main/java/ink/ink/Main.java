@@ -6,10 +6,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 
+import java.net.URL;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
@@ -25,6 +27,8 @@ public class Main extends Application {
         Scene scene = new Scene(root, 640, 480);
         primaryStage.setTitle("GraphR");
         primaryStage.setScene(scene);
+        URL url = getClass().getResource("/ink/ink/icon.png");
+        primaryStage.getIcons().add(new Image(url.toString()));
         primaryStage.show();
 
         root.requestFocus();
